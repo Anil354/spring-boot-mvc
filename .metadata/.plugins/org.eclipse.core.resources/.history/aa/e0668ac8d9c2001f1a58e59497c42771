@@ -1,0 +1,20 @@
+package com.sathya.springbootmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.sathya.springbootmvc.model.ProductModel;
+
+@Controller
+public class ProductController {
+	@GetMapping("/productform")
+	public String greet(){
+		return "add-product";
+	}
+	@PostMapping("/saveproduct")
+	public String saveproduct(ProductModel productModel)
+	{
+		return "success";
+	}
+}
